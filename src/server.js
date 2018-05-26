@@ -29,10 +29,12 @@ app.use(bodyParser.urlencoded({
 //creamos el proceso hijo con fork, que nos retorna una instancia de dicho proceso.
 const deleteUserProcess = fork(deleteUserProcessUrl);
 
+app.set('port', process.env.PORT || 3000);
+
 //indicamos la url base sobre la que va a atender peticiones nuestro servidor.
 app.use('/api/v1/', router);
 
 //le añadimos nuestro proceso hijo bajo el nombre de userProcess
 app.set('deleteUserProcess', deleteUserProcess);
 
-app.listen(port);
+app.listen(app.get('port'));
