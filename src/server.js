@@ -17,7 +17,7 @@ const router = require('./router.js');
 const port = 3000;
 
 //Indicamos el archivo que sera nuestro proceso hijo.
-const deleteUserProcessUrl = 'process/user/deleteUserProcess.js';
+const deleteUserProcessUrl = 'src/process/user/deleteUserProcess.js';
 
 //creamos nuestra variable de aplicación.
 const app = express();
