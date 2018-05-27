@@ -2,8 +2,8 @@
 const express = require('express');
 const { fork } = require('child_process');
 
-const addUserProcessUrl = 'src/process/user/addUserProcess.js';
-const updateUserProcessUrl = 'src/process/user/updateUserProcess.js';
+const addUserProcessUrl = '../src/process/user/addUserProcess.js';
+const updateUserProcessUrl = '../src/process/user/updateUserProcess.js';
 
 //importamos solo las funciones del modelo que vamos a usar desde el router.
 const {getUsers, getUserById, deleteUser, deleteAll} = require('./model/userModel.js');
